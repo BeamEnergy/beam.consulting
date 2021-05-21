@@ -113,6 +113,6 @@ output "beam_consulting_bucket_name" {
   value = aws_s3_bucket.default.id
 }
 
-output "beam_web_cloudfront_distribution_id" {
+output "beam_consulting_cloudfront_distribution_id" {
   value = aws_cloudfront_distribution.default.id
 }
