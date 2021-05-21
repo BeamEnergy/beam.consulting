@@ -46,12 +46,18 @@ html {
 }
 
 body {
-    background-color: #fff;
+    /*background-color: #fff;*/
     color: #526680;
     font-family: 'Work Sans', sans-serif;
     font-size: 20px;
     font-weight: 300;
     text-rendering: optimizeLegibility;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)), url(img/header.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* ----------------------------------------------------------------------- */
@@ -62,6 +68,7 @@ body {
 
 section {
     padding: 120px 0;
+    background-color: white;
 }
 
 .section__header {
@@ -199,7 +206,7 @@ a {
 }
 
 .buttons__container .btn-1,
-.buttons__container .btn-2{
+.buttons__container .btn-2 {
     margin-right: 20px;
 }
 
@@ -224,8 +231,7 @@ a {
 /* ----------------------------------------------------------------------- */
 
 header {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0)), url(img/header.jpg);
-    height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)), url(img/header.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -233,7 +239,7 @@ header {
 
 /* Main Nav */
 nav {
-    padding: 40px 100px 0px 100px;
+    padding: 40px 100px 40px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -286,7 +292,17 @@ nav {
     height: 30px;
     width: auto;
 }
+
 /* ------ */
+
+div.banner {
+    height: calc(100vh - 130px);
+}
+
+div.page {
+    min-height: calc(100vh - 130px - 175px);
+    background-color: white;
+}
 
 .header__container {
     position: absolute;
@@ -417,17 +433,17 @@ header p {
 .services__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .services__item {
     display: flex;
     flex-wrap: wrap;
     max-width: 350px;
-    box-shadow: 0 2px 8px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px 3px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
 }
-    
+
 .services__item__img {
     max-width: 350px;
     max-height: 210px;
@@ -451,7 +467,7 @@ header p {
 }
 
 .section__services h3 {
-        margin-top: 10px;
+    margin-top: 10px;
 }
 
 .services__item p {
@@ -531,7 +547,7 @@ header p {
 /* ----------------------------------------------------------------------- */
 
 .section__testimonials {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/testimonials.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/testimonials.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -632,7 +648,7 @@ cite img {
 .team__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;    
+    justify-content: space-between;
 }
 
 .team__member-header {
@@ -668,7 +684,7 @@ cite img {
     align-items: center;
 }
 
-.contact__box-intercom img{
+.contact__box-intercom img {
     height: 60px;
     width: auto;
     margin: 30px 10px;;
@@ -697,12 +713,12 @@ footer {
 .footer-links {
     display: flex;
     justify-content: space-between;
-    align-items:flex-start;
+    align-items: flex-start;
 }
 
 .footer-nav {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 

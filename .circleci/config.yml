@@ -1,0 +1,78 @@
+version: 2
+
+defaults: &defaults
+  docker:
+    - image: $BEAM_CI_ECR_IMAGE
+      aws_auth:
+        aws_access_key_id: $ROOT_AWS_ACCESS_KEY_ID
+        aws_secret_access_key: $ROOT_AWS_SECRET_ACCESS_KEY
+
+terraform_cache: &terraform_cache
+  key: terraform-cache-{{ .Branch }}-{{ checksum "./main.tf" }}
+  paths:
+    - ./terraform
+
+apply_terraform: &apply_terraform
+  <<: *defaults
+  working_directory: ~/project/infrastructure
+  steps:
+    - checkout:
+        path: ~/project
+    - restore_cache:
+        <<: *terraform_cache
+    - run: terraform init -backend-config="bucket=$(aws ssm get-parameter --name "/private/common/terraform_state_s3_bucket_name" | jq -r '.Parameter.Value')"
+    - run: terraform apply --auto-approve
+    - save_cache:
+        <<: *terraform_cache
+
+deploy: &deploy
+  <<: *defaults
+  steps:
+    - checkout
+    - run: cd infrastructure && terraform init -backend-config="bucket=$(aws ssm get-parameter --name "/private/common/terraform_state_s3_bucket_name" | jq -r '.Parameter.Value')"
+    - run: aws s3 sync ./site s3://$(cd infrastructure && terraform output beam_consulting_bucket_name)/ --delete --acl public-read
+#    - run: aws cloudfront create-invalidation --distribution-id $(cd infrastructure && terraform output beam_consulting_cloudfront_distribution_id) --paths '/*'
+
+jobs:
+  develop_apply_terraform:
+    <<: *apply_terraform
+  production_apply_terraform:
+    <<: *apply_terraform
+  develop_deploy:
+    <<: *deploy
+  production_deploy:
+    <<: *deploy
+
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - develop_apply_terraform:
+          context: develop
+          filters:
+            branches:
+              only:
+                - develop
+      - develop_deploy:
+          context: develop
+          requires:
+            - develop_apply_terraform
+          filters:
+            branches:
+              only:
+                - develop
+      - production_apply_terraform:
+          context: production
+          filters:
+            branches:
+              only:
+                - master
+      - production_deploy:
+          context: production
+          requires:
+            - production_apply_terraform
+          filters:
+            branches:
+              only:
+                - master
