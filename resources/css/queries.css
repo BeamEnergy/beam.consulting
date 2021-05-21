@@ -1,0 +1,413 @@
+/* Tablets in landscape and small laptops: from 1024px to 1200px */
+@media only screen and (max-width: 1200px) {
+    nav {
+        padding: 30px 40px 0px 40px;
+    }
+    
+    section {
+        padding: 80px 0;
+    }
+    
+    .long-copy {
+        margin-bottom: 80px;
+    }
+    
+    h2 {
+        margin-bottom: 40px;
+    }
+    
+    .services__container {
+        margin: 0 20px;
+        justify-content: center;
+    }
+    
+    .services__item {
+        margin: 20px 20px 5px 5px;
+    }
+    
+    .clogo__container {
+        margin: 20px 30px 0 30px;
+    }
+
+    .clogo__container img {
+        height: 60px;
+        width: auto;
+    }
+    
+    .team__container {
+        margin: 0 20px;
+        justify-content:center;    
+    }
+    
+    .team-photo {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .team__member {
+        max-width: 40%;
+        margin: 20px 10px;
+    }
+    
+}
+
+/* Tablets in potrait: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    
+    body {font-size: 18px;}
+    
+    .nav__links a:link,
+    .nav__links a:visited {
+        margin-left: 30px;
+    }
+    
+    .nav__logo {
+        height: 40px;
+    }
+    
+    h1 {font-size: 200%;}
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    .long-copy {
+        margin-bottom: 50px;
+    }
+    
+    h2 {
+        margin-bottom: 30px;
+    }
+    
+    .services__container {
+        margin: 0 20px;
+        justify-content: center;
+    }
+    
+    .services__item {
+        max-width: 320px;
+        margin: 20px 20px 5px 5px;
+    }
+    
+    .services__item__img {
+        max-width: 320px;
+        max-height: 180px;
+    }
+    
+    .clogo__container {
+        margin: 20px 30px 0 30px;
+    }
+
+    .clogo__container img {
+        height: 50px;
+        width: auto;
+    }
+    
+    .team__container {
+        margin: 0 20px;
+        justify-content:center;    
+    }
+    
+    .team-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .about__headline p,
+    .beam_solar__headline p {
+        font-size: 110%;
+    }
+    
+    .buttons__container .btn-2 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    
+    .challenge__group {
+        width: 100%;
+        padding: 0 5%;
+    }
+    
+    .nav__links a:link,
+    .nav__links a:visited {
+        margin-left: 15px;
+    }
+    
+    body {font-size: 16px;}
+    
+    h1 {font-size: 150%;}
+    
+    .nav__logo {
+        height: 30px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    .services__container {
+        margin: 0 20px;
+        justify-content: center;
+    }
+    
+    .services__item {
+        max-width: 280px;
+        margin: 15px 15px 5px 5px;
+    }
+    
+    .services__item__img {
+        max-width: 280px;
+        max-height: 150px;
+    }
+    
+    .section__services h3 {
+        margin-top: 5px;
+    }
+    .services__item p {
+        margin-bottom: 5px;
+    }
+    
+    .clogo__container {
+        margin: 20px 20px 0 20px;
+    }
+
+    .clogo__container img {
+        height: 40px;
+        width: auto;
+    }
+    
+    .team-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+    }
+
+    .team__container {
+        justify-content:center;    
+    }
+
+    .team__member {
+        max-width: 80%;
+        margin: 10px 5px;
+        padding: 5%;
+    }
+
+    .section__team p {
+        margin-bottom: 10px;
+    }
+    
+    h2:after {
+        margin-top: 20px;
+    }
+    
+    .about__container,
+    .beam_solar__container {
+        flex-direction: column;
+    }
+    
+    .about__description,
+    .beam_solar__description {
+        margin-left: 0;
+        margin-top: 30px;
+        max-width: 500px;
+    }
+    
+    .section__about h2:after {
+        width: 240px;
+    }
+
+    .about__headline p,
+    .beam_solar__headline p {
+        font-size: 110%;
+    }
+    
+    .footer-links {
+        justify-content: space-around;
+    }
+    
+    .footer-nav {
+        flex-direction: column
+    }
+    
+    .social-links {
+        flex-direction: column
+    }
+    
+    footer p {
+        margin-top: 30px;
+    }
+    
+    .footer-container {
+        margin: 0 20px;
+    }
+    
+    .contact__container {
+        margin: 0 10%;
+    }
+    
+    .contact__container p {
+        font-size: 95%;
+    }
+    
+}
+    
+/* Small phones: from 0px to 480px */
+@media only screen and (max-width: 480px) {
+    
+    body {font-size: 15px;}
+    
+    .nav__links a:link,
+    .nav__links a:visited {
+        margin-left: 10px;
+    }
+    
+    .nav__logo {
+        height: 25px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+        margin-bottom: 20px;
+        font-size: 90%;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+        font-size: 130%;
+    }
+    
+    h2:after {
+        margin-top: 15px;
+    }
+    
+
+    .services__item {
+        max-width: 280px;
+        margin: 10px auto;
+    }
+    
+    .section__services h3 {
+        margin-top: 0;
+    }
+    .services__item p {
+        margin-bottom: 0;
+    }
+    
+    .clogo__container {
+        margin: 20px 20px 30px 20px;
+    }
+
+    .clogo__container img {
+        height: 40px;
+        width: auto;
+        margin: 10px 10px 0 10px;
+    }
+    
+    .team-photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .team__container {
+        justify-content:center;    
+    }
+
+    .team__member {
+        max-width: 80%;
+        margin: 10px 5px;
+        padding: 5%;
+    }
+
+    .section__team p {
+        margin-bottom: 5px;
+    }
+    
+    .about__container,
+    .beam_solar__container {
+        flex-direction: column;
+    }
+    
+    .about__description,
+    .beam_solar__description {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .section__about h2:after {
+        width: 170px;
+    }
+    
+    .btn-2:link,
+    .btn-2:visited,
+    .btn-1:link,
+    .btn-1:visited,
+    .btn-1-ghost:link,
+    .btn-1-ghost:visited {
+        padding: 10px 20px;
+        font-size: 90%;
+    }
+    
+    .about__headline p,
+    .beam_solar__headline p {
+        font-size: 100%;
+    }
+    
+    .challenge__item {
+        max-width: 320px;
+    }
+    
+    header p {
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        margin-bottom: 20px;
+    }
+    
+    .footer-links {
+        justify-content: space-around;
+    }
+    
+    .footer-nav {
+        flex-direction: column
+    }
+    
+    .social-links {
+        flex-direction: column
+    }
+    
+    footer p {
+        margin-top: 30px;
+    }
+    
+    .footer-container {
+        margin: 0 20px;
+    }
+    
+    .contact__container {
+        margin: 0 10%;
+    }
+    
+    .contact__container p {
+        font-size: 95%;
+    }
+
+}
