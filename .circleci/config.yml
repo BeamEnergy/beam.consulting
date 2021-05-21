@@ -30,7 +30,8 @@ deploy: &deploy
   steps:
     - checkout
     - run: cd infrastructure && terraform init -backend-config="bucket=$(aws ssm get-parameter --name "/private/common/terraform_state_s3_bucket_name" | jq -r '.Parameter.Value')"
-    - run: aws s3 sync ./site s3://$(cd infrastructure && terraform output beam_consulting_bucket_name)/ --delete --acl public-read
+    - run: jekyll build
+    - run: aws s3 sync ./_site s3://$(cd infrastructure && terraform output beam_consulting_bucket_name)/ --delete --acl public-read
 #    - run: aws cloudfront create-invalidation --distribution-id $(cd infrastructure && terraform output beam_consulting_cloudfront_distribution_id) --paths '/*'
 
 jobs:
