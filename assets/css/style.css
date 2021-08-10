@@ -324,6 +324,7 @@ header p {
     display: flex;
 }
 
+/**
 .pulse {
     position: fixed;
     width: 200vh;
@@ -346,6 +347,7 @@ header p {
         transform: scale(1);
     }
 }
+**/
 
 /* ----------------------------------------------------------------------- */
 /* CHALLENGE */
