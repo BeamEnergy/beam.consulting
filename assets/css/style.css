@@ -333,7 +333,7 @@ header p {
     border-radius: 100%;
     border: 2px solid #506AF8;
     animation: pulse ease-out 4s 2 forwards;
-    z-index: -1;
+    z-index: 1;
 }
 
 @keyframes pulse {
@@ -633,7 +633,6 @@ cite img {
     font-size: 100%;
     margin: 3px 0px 0px 20px;
     transition: color 0.2s;
-    z-index: 999;
 }
 
 .icon-xsmall-linkedin:hover {
